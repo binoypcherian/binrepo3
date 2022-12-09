@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <style>
+        .mystyle1 { margin-top:150px; margin-left: 400px; margin-right: 400px;
+                    line-height: .5; background-color: lightblue; color: black;
+                    border: 2px solid black; text-align:center; padding:50px }
+        </style>
+</head>
+<body>
+<div class="mystyle1">
+    <label > <font size='+2'>Login Form </font></label> <br> <br> <br>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" name="user_login" placeholder="User Name"> <br> <br>
+        <input type="password" name="pass_login" placeholder="Password"> <br> <br>
+        <input type="submit" value="Submit">
+    </form>
+
+</div>
+{% for msg in messages %}
+<h2>{{msg}}</h2>
+{% endfor %}
+</body>
+</html>
